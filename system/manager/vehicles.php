@@ -4,45 +4,59 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro de Multas</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<title>Cadastro de Veículos</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div id="app">
 		<?php require_once "../header.php"; ?>
 	
-		<!--------- Cadastro de Multas ---------->
+		<!--------- Cadastro de Veículos ---------->
 		<div class="container mt-3">
             <div class="card border-dark mb-3">
                 <div class="card-header bg-dark text-white">
-                    <h3>Gerenciar Multas</h3>                
+                    <h3>Gerenciar Veículos</h3>                
                 </div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div class="col-8">
                             <form>
                                 <div class="form-group">
-                                    <label for="">Veículo</label>
+                                    <label for="">Placa</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Usuário</label>
+                                    <label for="">Marca</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
-                            
                                 <div class="form-group">
-                                    <label for="">Data</label>
-                                    <input type="date" class="form-control" id="" placeholder="">
+                                    <label for="">Modelo</label>
+                                    <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Valor</label>
-                                    <input type="number" class="form-control" id="" placeholder="R$">
+                                    <label for="">Cor</label>
+                                    <input type="text" class="form-control" id="" placeholder="">
                                 </div>
+                                <div class="form-group">
+                                    <label for="">Ano</label>
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">KM</label>
+                                    <input type="text" class="form-control" id="" placeholder="">
+                                </div>
+								<div class="form-group">
+									<label for="">Escolha a opção</label>
+									<select class="form-control" id="">
+										<option>Alugar Veículo</option>
+										<option>Reservar Veículo</option>
+									</select>
+								</div>
                                 <button type="button" class="btn btn-dark mt-5">Salvar</button>
                                 <button type="button" class="btn btn-dark mt-5">Editar</button>
                                 <button type="button" class="btn btn-dark mt-5">Excluir</button>
@@ -54,26 +68,30 @@
             </div>
             <div class="card border-dark mb-5">
                 <div class="card-header bg-dark text-white">
-                    <h3>Lista de Multas</h3>                
+                    <h3>Lista de Clientes</h3>                
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover table-strped">
                         <thead>
                             <tr>
-                                <th>Veículo</th>
-                                <th>Usuário</th>
-                                <th>Data</th>
-                                <th>Valor</th>
+                                <th>Placa</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+								<th>Cor</th>
+                                <th>Ano</th>
+								<th>Opção<th>
 
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td> Corsa</td>
-                                <td>Seu zé</td>
-                                <td>22.06.2008</td>
-								<td>R$ 240,00</td>
-
+                                <td>AAA-2222</td>
+								<td>FIAT</td>
+								<td>PALIO AX</td>
+                                <td>PRETO</td>
+								<td>2006</td>
+                                <td>Reserva</td>
+                                
                             </tr>
                         </tbody>
                     </table>

@@ -4,60 +4,44 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro de Clientes</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<title>Cadastro de Multas</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div id="app">
 		<?php require_once "../header.php"; ?>
 	
-		<!--------- Cadastro de Clientes ---------->
+		<!--------- Cadastro de Multas ---------->
 		<div class="container mt-3">
             <div class="card border-dark mb-3">
                 <div class="card-header bg-dark text-white">
-                    <h3>Gerenciar Clientes</h3>                
+                    <h3>Gerenciar Multas</h3>                
                 </div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div class="col-8">
                             <form>
                                 <div class="form-group">
-                                    <label for="">Razão Social</label>
+                                    <label for="">Placa Veículo</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">CNPJ</label>
+                                    <label for="">Usuário</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
-                                <h2>Endereço</h2>
+                            
                                 <div class="form-group">
-                                    <label for="">Logradouro</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
+                                    <label for="">Data</label>
+                                    <input type="date" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Número</label>
-                                    <input type="number" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Complemento</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Bairro</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Cidade</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Estado</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
+                                    <label for="">Valor</label>
+                                    <input type="text" class="form-control" id="" placeholder="R$">
                                 </div>
                                 <button type="button" class="btn btn-dark mt-5">Salvar</button>
                                 <button type="button" class="btn btn-dark mt-5">Editar</button>
@@ -70,22 +54,26 @@
             </div>
             <div class="card border-dark mb-5">
                 <div class="card-header bg-dark text-white">
-                    <h3>Lista de Clientes</h3>                
+                    <h3>Lista de Multas</h3>                
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover table-strped">
                         <thead>
                             <tr>
-                                <th>Razão</th>
-                                <th>CNPJ</th>
-                                <th>Endereço</th>
+                                <th> Placa Veículo</th>
+                                <th>Usuário</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Cliente 1</td>
-                                <td>1235.12512.1512~123-2</td>
-                                <td>Rua dos Maconhistas, 420</td>
+                                <td> Corsa</td>
+                                <td>User</td>
+                                <td>22.06.2008</td>
+								<td>R$ 240,00</td>
+
                             </tr>
                         </tbody>
                     </table>

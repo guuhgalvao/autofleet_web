@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de Clientes</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -85,7 +85,7 @@
                             <tr>
                                 <td>Cliente 1</td>
                                 <td>1235.12512.1512~123-2</td>
-                                <td>Rua dos Maconhistas, 420</td>
+                                <td>Rua das flores, 420</td>
                             </tr>
                         </tbody>
                     </table>

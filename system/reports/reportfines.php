@@ -4,30 +4,29 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Relatórios de Reservas</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<title>Relatórios de Multas</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div id="app">
 		<?php require_once "../header.php"; ?>
 	
-		<!--------- Relatório de Reservas ---------->
+		<!--------- Relatório de Multas ---------->
 		<div class="container mt-3">
         <table class="table">
 <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Cliente</th>
+      <th scope="col">Usuário</th>
       <th scope="col">Veículo</th>
-      <th scope="col">Data de Retirada</th>
-      <th scope="col">Data de Retorno</th>
-      <th scope="col">Tipo</th>
+      <th scope="col">Data</th>
+      <th scope="col">Valor da Multa</th>
 
     </tr>
   </thead>

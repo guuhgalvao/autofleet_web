@@ -4,61 +4,53 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro de Clientes</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<script src="../js/jquery-3.4.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<title>Cadastro de Usuários</title>
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<div id="app">
 		<?php require_once "../header.php"; ?>
 	
-		<!--------- Cadastro de Clientes ---------->
+		<!--------- Cadastro de Usuários ---------->
 		<div class="container mt-3">
             <div class="card border-dark mb-3">
                 <div class="card-header bg-dark text-white">
-                    <h3>Gerenciar Clientes</h3>                
+                    <h3>Gerenciar Usuários</h3>                
                 </div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div class="col-8">
                             <form>
                                 <div class="form-group">
-                                    <label for="">Razão Social</label>
+                                    <label for="">Nome</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">CNPJ</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <h2>Endereço</h2>
-                                <div class="form-group">
-                                    <label for="">Logradouro</label>
+                                    <label for="">Email</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Número</label>
-                                    <input type="number" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Complemento</label>
+                                    <label for="">Telefone</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Bairro</label>
+                                    <label for="">Senha</label>
                                     <input type="text" class="form-control" id="" placeholder="">
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Cidade</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Estado</label>
-                                    <input type="text" class="form-control" id="" placeholder="">
-                                </div>
+								<div class="form-group">
+                                    <label for="">Escolha a opção</label>
+                     				<select class="form-control" id="">
+                        				 <option>Admin</option>
+                        				 <option>Gerente</option>
+                        				 <option>Cliente</option>
+                   				    </select>
+          					   </div>
+                               
                                 <button type="button" class="btn btn-dark mt-5">Salvar</button>
                                 <button type="button" class="btn btn-dark mt-5">Editar</button>
                                 <button type="button" class="btn btn-dark mt-5">Excluir</button>
@@ -76,16 +68,21 @@
                     <table class="table table-hover table-strped">
                         <thead>
                             <tr>
-                                <th>Razão</th>
-                                <th>CNPJ</th>
-                                <th>Endereço</th>
+                                <th>Nome
+                                <th>Email</th>
+                                <th>Telefone</th>
+								<th>Senha</th>
+								<th>Tipo de Usuário</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Cliente 1</td>
-                                <td>1235.12512.1512~123-2</td>
-                                <td>Rua dos Maconhistas, 420</td>
+                                <td>José</td>
+                                <td>jose@jose.com</td>
+                                <td>4343-3333</td>
+								<td>senha@1234</td>
+                                <td>admin</td>
+
                             </tr>
                         </tbody>
                     </table>
