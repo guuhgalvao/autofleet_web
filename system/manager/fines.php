@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="../../css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<script src="../../js/jquery-3.4.1.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/sweetalert2.all.min.js"></script>
 </head>
 
 <body>

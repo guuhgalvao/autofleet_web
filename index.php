@@ -10,30 +10,77 @@
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script src="./js/jquery-3.4.1.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
+   <script src="./js/bootstrap.min.js"></script>
+   <script src="./js/sweetalert2.all.min.js"></script>
 </head>
-<div class="sidenav">
-         <div class="login-main-text">
-			<img src="css/giphy.gif">
-         </div>
+<body>
+   <div class="sidenav">
+      <div class="login-main-text">
+      <img src="css/giphy.gif">
       </div>
-      <div class="main">
-         <div class="col-md-6 col-sm-12">
+   </div>
+   <div class="main">
+      <div class="row align-items-center h-100">
+         <div class="col-md-4 col-sm-12">
             <div class="login-form">
-               <form>
+               <form id="frmLogin">
                   <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" placeholder="User Name">
+                     <label>E-mail</label>
+                     <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required>
                   </div>
                   <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password">
+                     <label>Senha</label>
+                     <input type="password" class="form-control" placeholder="Senha" name="password" id="password" required>
                   </div>
-                 <a href="system/" target=""> <button type="button" class="btn btn-black">Login</button></a> 
+                  <button type="submit" class="btn btn-black" id="btnLogin">Login</button>
                </form>
             </div>
          </div>
       </div>
-<body>
+   </div>
+   <script>
+      $(document).ready(function(){
+         $('#frmLogin').on('submit', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            var formData = {
+               email: $('#email').val(),
+               password: $('#password').val()
+            };
+
+            $.ajax({
+               type: "POST",
+               url: "http://localhost:8080/api/user/login",
+               dataType: 'json',
+               contentType: "application/json; charset=utf-8",
+               data: JSON.stringify(formData),
+               success: function(response) {
+                  if (response.status === 'success') {
+                     // console.log(response);
+                     sessionStorage.setItem('user', JSON.stringify(response.data));
+                     window.location = './system';
+                  } else {
+                     Swal.fire({
+                        title: 'Alerta!',
+                        text: response.message,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                     })
+                  }
+               },
+               error: function(data) {
+                  console.log(data);
+                  Swal.fire({
+                     title: 'Alerta!',
+                     text: 'Erro ao conectar, tente novamente!',
+                     icon: 'error',
+                     confirmButtonText: 'OK'
+                  })
+               }
+            });
+         });
+      });
+   </script>
 </body>
 </html>
