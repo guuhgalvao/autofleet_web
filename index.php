@@ -40,6 +40,12 @@
    </div>
    <script>
       $(document).ready(function(){
+         var user = JSON.parse(sessionStorage.getItem('user'));
+
+         if (user !== null) {
+            window.location = './system';
+         }
+
          $('#frmLogin').on('submit', function(e){
             e.preventDefault();
             e.stopPropagation();

@@ -16,6 +16,7 @@
 
 <body>
     <div id="app">
+        <?php require_once "../config.php"; ?>
         <?php require_once "./header.php"; ?>
 
         <!--------- Galeria de Veículos ---------->
@@ -51,6 +52,16 @@
         <script>
             $(document).ready(function() {
 
+                $(document).on('click', '#reservation', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var vehicle_id = $(this).attr('data-id');
+                    sessionStorage.setItem('vehicle_id', vehicle_id);
+
+                    window.location = './reservation.php';
+                });
+
                 var vehicles = {};
 
                 $.ajax({
@@ -80,7 +91,7 @@
                                                                             <div class="ad-title m-auto">
                                                                                 <h5>${obj.brand} ${obj.model} - ${obj.color}</h5>
                                                                             </div>
-                                                                            <a class="ad-btn" href="reservation.php">Reservar</a>
+                                                                            <a class="ad-btn" href="" id="reservation" data-id="${obj.id}">Reservar</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>`);
